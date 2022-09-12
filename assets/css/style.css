@@ -1,0 +1,198 @@
+/*Reset CSS*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* 
+1.Từ ngoài vào trong
+2.Từ trên xuống dưới 
+3.Tổng quan đến chi tiết
+
+*/
+/* 
+1.vị trí
+2.kích thước
+3.màu sắc
+4. Kiểu dáng (kiểu chữ, hình tròn, vuông, ...)
+ */
+#main {}
+
+#header {
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#header .search-btn {
+    float: right;
+    padding: 0px 21px;
+
+}
+
+#header .search-btn :hover {
+    background-color: orangered;
+    cursor: pointer;
+    /*biến trỏ thành hình bàn tay*/
+
+}
+
+#header .search-icon {
+    color: white;
+    font-size: 20px;
+    line-height: 46px;
+
+}
+
+#nav,
+.subnav {
+    list-style-type: none;
+    /*loại bỏ dấu của thẻ ul,li*/
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav>li {
+    display: inline-block;
+
+}
+
+#nav li {
+    /* display: inline-block; */
+    /*xếp ngang các từ*/
+    position: relative;
+}
+
+#nav>li>a {
+    color: #fff;
+    text-transform: uppercase;
+    /*viết hoa*/
+}
+
+#nav li a {
+
+    text-decoration: none;
+    /*bỏ gạch chân*/
+    line-height: 46px;
+    /*căn giữa*/
+    padding: 0px 24px;
+    display: block;
+    /* dùng để chạm vào hiện vuông ô trỏ chuột tới */
+}
+
+#nav .subnav li a:hover,
+#nav>li:hover>a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+#nav .subnav {
+    display: none;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    /*chieu dai toi thieu*/
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+
+    background: url('/assets/image/slider/slider2.jpg') top center / cover no-repeat;
+
+}
+
+#slider .text-content {
+    position: absolute;
+    color: #000;
+    left: 50%;
+    transform: translate(-50%);
+    /*căn giữa*/
+    text-align: center;
+    bottom: 25%;
+}
+
+#content {}
+
+#content .movie-selection {
+    color: crimson;
+    font-size: 80px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#content .movie-list {
+    margin-top: 80px;
+}
+
+#content .movie-name {}
+
+#content .movie-item {
+    float: left;
+    width: calc(100%/5);
+    text-align: center;
+}
+
+#content .movie-list.movie-tickets {
+    position: absolute;
+    /* text-align: center; */
+    text-align: center;
+}
+
+.movie-tickets {
+    padding: 10px;
+    background-color: rgba(233, 18, 18, 0.3);
+    cursor: pointer;
+    width: max-content;
+    margin-top: 10px;
+    transform: translate(100%);
+
+    border-radius: 10px;
+
+}
+
+#content .movie-list img {
+    width: 250px;
+    height: 500px;
+    margin-top: 15px;
+    border-radius: 10px;
+    position: relative;
+}
+
+#content .movie-list img:hover {
+    opacity: 0.8;
+}
+
+#footer {
+    height: 1000px;
+}
